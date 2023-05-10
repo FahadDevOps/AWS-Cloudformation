@@ -1,23 +1,23 @@
 {
-    "AWSTemplateFormatVersion":"2010-09-09",
-    "Description":"This is my second template",
-    "Parameters":{
-        "S3BucketName":{
-        "Type":"String",
-        "Description":"Please enter the name of the S3 bucket should be Unique",
-        "MinLength":3,
-        "MaxLength":60,
-        "Default":"myuniquebucket2321"
+  "AWSTemplateFormatVersion": "2010-09-09",
+  "Description": "This is S3 Creation template",
+  "Parameters": {
+    "S3BucketName": {
+      "Type": "String",
+      "Description": "Please enter the name of the S3 bucket that should be Unique",
+      "MinLength": 3,
+      "MaxLength": 60,
+      "Default": "myuniquebucket2321"
     }
-},
-    "Resources":{
-        "S3Bucket":{
-        "Type":"AWS::S3::Bucket",
-        "Properties":{
-            "BucketName":{
-            "Ref":"S3BucketName"
+  },
+  "Resources": {
+    "S3Bucket": {
+      "Type": "AWS::S3::Bucket",
+      "Properties": {
+        "BucketName": {
+          "Ref": "S3BucketName"
         }
+      }
     }
-}
-}
+  }
 }
